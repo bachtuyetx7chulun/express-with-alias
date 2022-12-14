@@ -1,0 +1,26 @@
+# Express with alias
+
+Only alias setting for express project
+
+
+## Installation
+
+Install my-project with npm
+
+```js
+  git clone project at https://github.com/bachtuyetx7chulun/express-with-alias.git
+  cd express-with-alias
+  yarn install
+
+  # To run dev version
+  yarn dev 
+
+  # To run prod version
+  yarn build
+  yarn start
+```
+    
+## Authors
+
+- [@meocon](https://github.com/bachtuyetx7chulun)
+
