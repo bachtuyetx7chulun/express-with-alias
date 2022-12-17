@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  app:
+    container_name: graphql-server 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '4000:4000'
+    env_file:
+      - '.env'
+    restart: always
+
+  redis:
+    image: 'redis:alpine'
+    container_name: 'redis'
+    restart: always
+    ports:
+      - '6379:6379'
+    env_file:
+      - '.env'
+    command: /bin/sh -c "redis-server --requirepass $$REDIS_HOST_PASSWORD"
