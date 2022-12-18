@@ -1,8 +1,7 @@
-import { PubSub, withFilter } from 'graphql-subscriptions'
+import { withFilter } from 'graphql-subscriptions'
 import { authors, books } from '@/graphql/database'
 import { Author, Book } from '@/graphql/types'
-
-const pubsub = new PubSub()
+import { pubsub } from '@/graphql/services/redis'
 
 const resolvers = {
   SearchResult: {
